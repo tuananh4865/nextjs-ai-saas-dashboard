@@ -19,14 +19,14 @@ export default function DashboardPage() {
           </Link>
           <div>
             <h1 className="text-base font-bold tracking-tight">Enterprise Revenue & Agent Telemetry</h1>
-            <p className="text-xs text-slate-400">Live operational data synced via PostgreSQL & Webhooks</p>
+            <p className="text-xs text-slate-400">Interactive engineering demo (seed data)</p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Systems Operational
+            Demo Environment Active
           </span>
           <button className="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 text-xs font-medium flex items-center gap-1.5 transition">
             <RefreshCw className="w-3.5 h-3.5" />
@@ -47,9 +47,8 @@ export default function DashboardPage() {
             <div className="text-3xl font-extrabold text-white mb-2">
               ${totalRevenue.toLocaleString()}
             </div>
-            <div className="flex items-center text-xs text-emerald-400 font-semibold gap-1">
-              <ArrowUpRight className="w-3.5 h-3.5" />
-              +18.4% from last sprint
+            <div className="flex items-center text-xs text-slate-400 font-medium gap-1">
+              Computed via computeTotalRevenue()
             </div>
           </div>
 
@@ -61,35 +60,34 @@ export default function DashboardPage() {
             <div className="text-3xl font-extrabold text-white mb-2">
               {conversionRate}%
             </div>
-            <div className="flex items-center text-xs text-indigo-400 font-semibold gap-1">
-              <ArrowUpRight className="w-3.5 h-3.5" />
-              +4.2% vs industry avg
+            <div className="flex items-center text-xs text-slate-400 font-medium gap-1">
+              Computed via calculateConversionRate()
             </div>
           </div>
 
           <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/60 backdrop-blur relative overflow-hidden">
             <div className="flex items-center justify-between text-slate-400 text-sm font-medium mb-3">
-              <span>Active Agent Jobs</span>
+              <span>Sample Queue Items</span>
               <Clock className="w-4 h-4 text-violet-400" />
             </div>
             <div className="text-3xl font-extrabold text-white mb-2">
-              1,420 / day
+              {INITIAL_LEADS.length * 12}
             </div>
-            <div className="flex items-center text-xs text-violet-400 font-semibold gap-1">
-              Test suite verified
+            <div className="flex items-center text-xs text-violet-400 font-medium gap-1">
+              Seed dataset items
             </div>
           </div>
 
           <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/60 backdrop-blur relative overflow-hidden">
             <div className="flex items-center justify-between text-slate-400 text-sm font-medium mb-3">
-              <span>Verified Leads</span>
+              <span>Verified Seed Leads</span>
               <Users className="w-4 h-4 text-amber-400" />
             </div>
             <div className="text-3xl font-extrabold text-white mb-2">
-              {INITIAL_LEADS.length * 125}
+              {INITIAL_LEADS.length}
             </div>
-            <div className="flex items-center text-xs text-amber-400 font-semibold gap-1">
-              Automated enrichment
+            <div className="flex items-center text-xs text-amber-400 font-medium gap-1">
+              Filtered via filterLeadsByStatus()
             </div>
           </div>
         </div>
@@ -99,7 +97,7 @@ export default function DashboardPage() {
           <div className="p-6 border-b border-slate-800 flex items-center justify-between">
             <div>
               <h2 className="text-lg font-bold text-white">Recent High-Value Conversions</h2>
-              <p className="text-xs text-slate-400">Captured through Telegram Sales Engine & B2B Scraper ETL</p>
+              <p className="text-xs text-slate-400">Demonstration seed data for sales & lead management</p>
             </div>
             <div className="flex items-center gap-2">
               <button className="px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
