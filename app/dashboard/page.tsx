@@ -76,7 +76,7 @@ export default function DashboardPage() {
               1,420 / day
             </div>
             <div className="flex items-center text-xs text-violet-400 font-semibold gap-1">
-              99.8% uptime SLA
+              Test suite verified
             </div>
           </div>
 
